@@ -5,20 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waifu-uwu</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/x-icon" href=" /Fami.jpeg">
+
 </head>
 <body>
+
     <div id="mainDiv">
-        <div id="tag-conaiter">
-            <h1>Choose your's waifu pictures:</h1>
-            
-            
-            <button id="uwu">Genrate😍</button>
+        <div id="tag-container">
+            <h1>Choose your waifu pictures:</h1>
+
+            <div id="tag-options">
+                <label><input type="checkbox" value="maid"> Maid</label>
+                <label><input type="checkbox" value="waifu"> Waifu</label>
+                <label><input type="checkbox" value="marin-kitagawa"> Marin Kitagawa</label>
+                <label><input type="checkbox" value="mori-calliope"> Mori Calliope</label>
+                <label><input type="checkbox" value="raiden-shogun"> Raiden Shogun</label>
+                <label><input type="checkbox" value="oppai"> Oppai</label>
+                <label><input type="checkbox" value="selfies"> Selfies</label>
+                <label><input type="checkbox" value="uniform"> Uniform</label>
+                <label><input type="checkbox" value="kamisato-ayaka"> Kamisato Ayaka</label>
+                <label><input type="checkbox" value="ass"> Ass</label>
+                <label><input type="checkbox" value="hentai"> Hentai</label>
+                <label><input type="checkbox" value="milf"> Milf</label>
+                <label><input type="checkbox" value="oral"> Oral</label>
+                <label><input type="checkbox" value="paizuri"> Paizuri</label>
+                <label><input type="checkbox" value="ecchi"> Ecchi</label>
+                <label><input type="checkbox" value="ero"> Ero</label>
+                <label>
+                    <input type="checkbox" id="gif-toggle"> Get GIFs
+                </label>                
+            </div>
+
+            <button id="uwu">Generate 😍</button>
         </div>
-        
-        <div id="waifuImage"></div>
+
+        <div id="waifuImage">
+            <img id="waifus" src="" alt="Your Waifu will appear here">
+        </div>
     </div>
-   
-    
+
     <script src="index.js"></script>
 </body>
 </html>
