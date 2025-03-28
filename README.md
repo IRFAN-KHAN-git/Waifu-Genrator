@@ -1,21 +1,27 @@
-# 🌸 Waifu-Generator - Get Your Dream Waifu Instantly! 🌸
+# 🌸 Waifu Generator – Find Your Perfect Waifu!  
 
-Looking for anime waifus? **Waifu-Generator** lets you fetch **high-quality waifu images & GIFs** with custom tags! 🎌✨  
-**Select your waifu type, toggle GIFs, and enjoy unlimited waifus!**  
+A fun and interactive **waifu image generator** that lets you choose from different categories and generate waifus using the **Waifu API**!  
 
----
-
-## 🚀 Features
-✅ **Choose Your Waifu Tags** – Pick from a variety of categories!  
-✅ **GIF Support** – Toggle GIFs on/off for animated waifus! 🎥  
-✅ **Instant Results** – Fetch images dynamically from the Waifu API.  
-✅ **Simple & Fast UI** – Clean design for the best experience.  
-✅ **Powered by Waifu API** – Get the best waifu images with one click.  
+🌍 **Live Demo:** [Waifu Generator](waifugenrator.netlify.app)  
 
 ---
 
-## 🔧 Installation & Setup
+## ✨ Features  
+✅ **User-Selected Tags** – Choose your favorite waifu categories.  
+✅ **GIF Support** – Option to fetch animated waifus.  
+✅ **Fast & Seamless UI** – Smooth and interactive experience.  
+✅ **Modern Design** – Responsive & visually appealing interface.  
 
+---
+
+## 🛠 Tech Stack  
+- **Frontend:** React.js  
+- **Styling:** Tailwind CSS  
+- **API:** Waifu.im  
+
+---
+
+## 🔧 Installation & Setup  
 1. **Clone the repository**  
    ```sh
    git clone https://github.com/your-username/Waifu-Generator.git
