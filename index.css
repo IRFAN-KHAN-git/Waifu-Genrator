@@ -1,16 +1,89 @@
-#waifus {
-    width: 100%;
-    object-fit: contain;
-    
-}
-#mainDiv{
-    display: flex;
-    justify-content: space-between;
-   
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 20px;
 }
 
-#uwu{
-   
-    background-color: rgb(184, 154, 212);
-   
+#mainDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#tag-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+#tag-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#tag-options label {
+    background: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#tag-options input {
+    margin-right: 5px;
+}
+
+#uwu {
+    background-color: #ba68c8;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+#uwu:hover {
+    background-color: #9c27b0;
+}
+
+#waifuImage img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+    
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #tag-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #tag-options {
+        gap: 5px;
+    }
+
+    #waifuImage img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    #uwu {
+        width: 100%;
+        font-size: 14px;
+    }
 }
