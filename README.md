@@ -2,7 +2,7 @@
 
 A fun and interactive **waifu image generator** that lets you choose from different categories and generate waifus using the **Waifu API**!  
 
-🌍 **Live Demo:** [Waifu Generator](waifugenrator.netlify.app)  
+🌍 **Live Demo:** [Waifu Generator](https://waifugenrator.netlify.app/)  
 
 ---
 
