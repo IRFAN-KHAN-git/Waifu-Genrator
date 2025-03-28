@@ -1,0 +1,21 @@
+{
+    "name": "Waifu Generator",
+    "short_name": "WaifuGen",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#f7f7f7",
+    "theme_color": "#ba68c8",
+    "icons": [
+      {
+        "src": "Fami.jpeg",
+        "sizes": "192x192",
+        "type": "image/jpeg"
+      },
+      {
+        "src": "Fami.jpeg",
+        "sizes": "512x512",
+        "type": "image/jpeg"
+      }
+    ]
+  }
+  
