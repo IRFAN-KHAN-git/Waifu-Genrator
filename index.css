@@ -1,0 +1,16 @@
+#waifus {
+    width: 100%;
+    object-fit: contain;
+    
+}
+#mainDiv{
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+#uwu{
+   
+    background-color: rgb(184, 154, 212);
+   
+}
