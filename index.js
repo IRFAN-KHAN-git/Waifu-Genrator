@@ -1,63 +1,48 @@
-
-const uwu = document.getElementById("uwu")
+const uwu = document.getElementById("uwu");
 const waifuImage = document.querySelector('#waifuImage');
 
-const apiUrl = 'https://api.waifu.im/search';  
-const params = {
-  
-  included_tags: 'maid'
- 
-//   "maid",
-//   "waifu",
-//   "marin-kitagawa",
-//   "mori-calliope",
-//   "raiden-shogun",
-//   "oppai",
-//   "selfies",
-//   "uniform",
-//   "kamisato-ayaka"
-//   "ass",
-//   "hentai",
-//   "milf",
-//   "oral",
-//   "paizuri",
-//   "ecchi",
-//   "ero"
+const apiUrl = 'https://api.waifu.im/search';
 
-};
+uwu.addEventListener('click', function () {
+  // Get selected tags
+  const checkboxes = document.querySelectorAll('#tag-options input[type="checkbox"]:checked');
+  const tags = Array.from(checkboxes)
+    .filter(cb => cb.id !== "gif-toggle") // skip gif toggle for now
+    .map(cb => cb.value);
 
-const queryParams = new URLSearchParams();
+  // Check if GIF toggle is enabled
+  const isGif = document.getElementById("gif-toggle").checked;
 
-for (const key in params) {
-  if (Array.isArray(params[key])) {
-    params[key].forEach(value => {
-      queryParams.append(key, value);
-    });
-  } else {
-    queryParams.set(key, params[key]);
+  // Build params
+  const params = new URLSearchParams();
+  if (tags.length > 0) {
+    tags.forEach(tag => params.append("included_tags", tag));
   }
-}
-const requestUrl = `${apiUrl}?${queryParams.toString()}`;
+  if (isGif) {
+    params.set("is_gif", "true");
+  }
 
-uwu.addEventListener('click',function(){
+  const requestUrl = `${apiUrl}?${params.toString()}`;
 
-
-fetch(requestUrl)
-  .then(response => {
-    if (response.ok) {
+  fetch(requestUrl)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Request failed with status code: ' + response.status);
+      }
       return response.json();
-    } else {
-      throw new Error('Request failed with status code: ' + response.status);
-    }
-  })
-  .then(data => {
-    let responce=data.images[0].url
-    waifuImage.innerHTML=`
-        <img  id="waifus" src="${responce}" style="height: 500px;">
-    `
-    
-  })
-  .catch(error => {
-    console.error('An error occurred:', error.message);
-  });
-})
+    })
+    .then(data => {
+      if (data.images && data.images.length > 0) {
+        const url = data.images[0].url;
+        waifuImage.innerHTML = `
+          <img id="waifus" src="${url}" alt="waifu" style="max-height: 500px;">
+        `;
+      } else {
+        waifuImage.innerHTML = `<p>No images found 😢</p>`;
+      }
+    })
+    .catch(error => {
+      console.error('An error occurred:', error.message);
+      waifuImage.innerHTML = `<p>Error: ${error.message}</p>`;
+    });
+});
